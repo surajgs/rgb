@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { PageHead } from './Builder'
 
@@ -200,7 +200,33 @@ export default function Quote() {
   )
 }
 
-function Step({ title, subtitle, children }: any) {
+type StepProps = {
+  title: string
+  subtitle?: string
+  children: ReactNode
+}
+
+type ChipGroupProps = {
+  options: readonly string[]
+  value: string
+  onChange: (value: string) => void
+}
+
+type ChipGroupMultiProps = {
+  options: readonly string[]
+  value: string[]
+  onToggle: (value: string) => void
+}
+
+type TextFieldProps = {
+  label: string
+  value: string
+  onChange: (value: string) => void
+  type?: string
+  placeholder?: string
+}
+
+function Step({ title, subtitle, children }: StepProps) {
   return (
     <div>
       <div className="eyebrow">Question</div>
@@ -211,7 +237,7 @@ function Step({ title, subtitle, children }: any) {
   )
 }
 
-function ChipGroup({ options, value, onChange }: any) {
+function ChipGroup({ options, value, onChange }: ChipGroupProps) {
   return (
     <div className="flex flex-wrap gap-2">
       {options.map((o: string) => (
@@ -224,7 +250,7 @@ function ChipGroup({ options, value, onChange }: any) {
     </div>
   )
 }
-function ChipGroupMulti({ options, value, onToggle }: any) {
+function ChipGroupMulti({ options, value, onToggle }: ChipGroupMultiProps) {
   return (
     <div className="flex flex-wrap gap-2">
       {options.map((o: string) => (
@@ -237,7 +263,7 @@ function ChipGroupMulti({ options, value, onToggle }: any) {
     </div>
   )
 }
-function TextField({ label, value, onChange, type = 'text', placeholder }: any) {
+function TextField({ label, value, onChange, type = 'text', placeholder }: TextFieldProps) {
   return (
     <label className="block">
       <div className="eyebrow mb-2">{label}</div>
