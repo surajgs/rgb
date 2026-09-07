@@ -13,9 +13,11 @@ body {
   font-feature-settings: 'ss01', 'cv11';
 }
 
-/* Arvind-style display headings — sans-serif, tight-tracked, sentence case */
+/* Arvind-style display headings — serif display face, sentence case */
 .h-display {
-  @apply font-display font-medium tracking-tightest;
+  @apply font-serif font-medium;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
   line-height: 1.06;
   overflow-wrap: break-word;
   hyphens: auto;

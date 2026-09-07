@@ -37,6 +37,7 @@ export default {
         // Arvind uses a modern geometric sans throughout
         sans: ['Inter', 'Helvetica Neue', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Inter', 'Helvetica Neue', 'system-ui', 'sans-serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
       },
       letterSpacing: {
