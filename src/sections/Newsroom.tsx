@@ -26,11 +26,11 @@ const items = [
 
 export default function Newsroom() {
   return (
-    <section className="section py-24 md:py-32 border-y border-mist bg-cream">
+    <section className="section pt-14 md:pt-20 pb-24 md:pb-32 border-b border-mist bg-cream">
       <div className="section-inner">
         <SectionHead
           eyebrow="Newsroom"
-          title={<>From the <strong>floor</strong> and<br/>the <strong>front office.</strong></>}
+          title={<>From the <strong className="text-arvOrange">floor</strong> and<br/>the <strong className="text-arvOrange">front office.</strong></>}
           intro="Capacity additions, milestone dispatches and compliance updates."
         />
 

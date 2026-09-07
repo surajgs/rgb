@@ -13,7 +13,7 @@ const steps = [
 
 export default function Capability() {
   return (
-    <section className="section bg-cream border-y border-mist py-24 md:py-32">
+    <section className="section bg-cream border-b border-mist pt-14 md:pt-20 pb-24 md:pb-32">
       <div className="section-inner">
         <SectionHead
           eyebrow="Manufacturing Capability"

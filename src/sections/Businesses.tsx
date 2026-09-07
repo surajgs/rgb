@@ -56,7 +56,7 @@ export default function Businesses() {
       <div className="section-inner">
         <SectionHead
           eyebrow="Our businesses"
-          title={<>Built on legacy.<br/><strong>Diversified for future.</strong></>}
+          title={<>Built on legacy.<br/><strong className="text-arvOrange">Diversified for future.</strong></>}
           intro="Five programs share one production floor at our Ambattur unit — everything from a single 500-piece hospitality order to a 25,000-piece marathon dispatch."
         />
 

@@ -4,11 +4,11 @@ import HeroVisual from './HeroVisual'
 export default function Hero() {
   return (
     <section className="section relative overflow-hidden bg-paper border-b border-mist">
-      <div className="section-inner relative pt-16 pb-20 md:pt-24 md:pb-24 grid gap-12 lg:grid-cols-12 items-center">
+      <div className="section-inner relative pt-16 pb-20 md:pt-24 md:pb-24 grid gap-12 lg:grid-cols-12 items-start">
         <div className="lg:col-span-7 relative">
           <h1 className="h-display text-[36px] sm:text-[46px] md:text-[64px] lg:text-[80px] max-w-4xl">
-            From <strong>heritage</strong> looms<br/>
-            to <strong>diversified</strong> apparel<br/>
+            From <strong className="text-arvOrange">heritage</strong> looms<br/>
+            to <strong className="text-arvOrange">diversified</strong> apparel<br/>
             manufacturing.
           </h1>
 
@@ -20,16 +20,15 @@ export default function Hero() {
             <Link to="/quote" className="btn btn-accent">Request a quote →</Link>
             <Link to="/builder" className="know-more">Explore our capabilities →</Link>
           </div>
+        </div>
 
-          <div className="mt-14 grid grid-cols-3 max-w-lg gap-6 border-t border-mist pt-6">
+        <div className="lg:col-span-5 relative flex flex-col items-center">
+          <HeroVisual />
+          <div className="mt-8 grid w-full max-w-md grid-cols-3 gap-6 border-t border-mist pt-6">
             <Stat n="17+" l="Years in operation" />
             <Stat n="2.4M+" l="Units produced" />
             <Stat n="180+" l="B2B clients" />
           </div>
-        </div>
-
-        <div className="lg:col-span-5 relative flex justify-center">
-          <HeroVisual />
         </div>
       </div>
       <Marquee />

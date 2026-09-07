@@ -17,7 +17,7 @@ const caps = [
 
 export default function WhyChoose() {
   return (
-    <section className="section bg-forest text-paper py-24 md:py-32 relative overflow-hidden">
+    <section className="section bg-forest text-paper py-28 md:py-36 relative overflow-hidden">
       <WaveTop />
       <div className="section-inner relative">
         <div className="grid gap-8 md:grid-cols-12 items-end">

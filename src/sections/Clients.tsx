@@ -8,7 +8,7 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section className="section py-24 md:py-32">
+    <section className="section py-20 md:py-28">
       <div className="section-inner">
         <SectionHead
           eyebrow="Clients"

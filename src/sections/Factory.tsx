@@ -15,7 +15,7 @@ const certs = ['ISO 9001', 'OEKO-TEX', 'GOTS-track', 'SA8000-track', 'Sedex-trac
 
 export default function Factory() {
   return (
-    <section className="section py-24 md:py-32">
+    <section className="section py-20 md:py-28">
       <div className="section-inner">
         <SectionHead
           eyebrow="Factory & quality"

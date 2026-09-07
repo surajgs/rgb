@@ -48,13 +48,13 @@ function OnColorEyebrow({ children }: { children: React.ReactNode }) {
 /* ---------- Chapter Header (on white) ---------- */
 function ChapterHeader() {
   return (
-    <div className="section-inner pt-24 md:pt-32 pb-8">
+    <div className="section-inner pt-14 md:pt-20 pb-8">
       <div className="grid gap-8 md:grid-cols-12 items-end">
         <div className="md:col-span-8">
           <div className="eyebrow">Fashioning possibilities</div>
           <h2 className="h-display mt-4 text-4xl md:text-6xl leading-[1.04]">
             One production floor.<br/>
-            <strong>Four chapters</strong> in the same story.
+            <strong className="text-arvOrange">Four chapters</strong> in the same story.
           </h2>
         </div>
         <p className="md:col-span-4 text-graphite text-[15px] leading-relaxed">

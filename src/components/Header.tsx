@@ -71,7 +71,7 @@ export default function Header() {
         <div className="section-inner flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
             <Logo />
-            <span className="hidden md:block eyebrow pl-3 border-l border-mist !text-graphite">
+            <span className="hidden md:block pl-3 border-l border-mist text-[11px] font-mono uppercase tracking-micro text-graphite">
               Lifestyle Brands
             </span>
           </Link>

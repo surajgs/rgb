@@ -121,3 +121,53 @@ input, select, textarea { @apply bg-transparent rounded-card; }
   border: 1px dashed rgba(255,255,255,0.6);
   border-radius: 999px;
 }
+
+/* The hero traces a single thread from loom to a modern production line. */
+.hero-kb-img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity 1.2s ease;
+  transform: scale(1.02); will-change: transform, opacity;
+}
+.hero-kb-img.is-active { opacity: 1; animation: hero-kenburns 6.4s ease-out forwards; }
+.hero-kb-scrim {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11,15,20,.32) 0%, rgba(11,15,20,.12) 32%, rgba(11,15,20,.55) 100%),
+    radial-gradient(120% 90% at 12% 8%, rgba(243,124,36,.22), transparent 58%),
+    radial-gradient(110% 85% at 90% 100%, rgba(22,90,57,.28), transparent 55%);
+}
+@keyframes hero-kenburns { from { transform: scale(1.02) translate3d(0,0,0); } to { transform: scale(1.13) translate3d(-1.2%,-1.4%,0); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-kb-img { animation: none !important; transition: opacity .3s ease; }
+}
+.story-grain {
+  position: absolute; inset: 0; opacity: .16; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 120px 120px;
+}
+.story-grid { background-image: radial-gradient(#0B0F14 .7px, transparent .7px); background-size: 14px 14px; }
+.story-thread { stroke: #F37C24; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 8 12; animation: story-thread 3.5s linear infinite; filter: drop-shadow(0 0 3px rgba(243,124,36,.55)); }
+.story-thread-two { stroke: #165A39; animation-delay: -1.15s; filter: drop-shadow(0 0 3px rgba(22,90,57,.55)); }
+.story-thread-three { stroke: #62C7CE; animation-delay: -2.3s; filter: drop-shadow(0 0 3px rgba(98,199,206,.6)); }
+.story-route { stroke: #0B0F14; stroke-width: 1.5; stroke-dasharray: 3 5; opacity: .32; }
+.story-status { width: 7px; height: 7px; border-radius: 999px; background: #F37C24; box-shadow: 0 0 0 0 rgba(243,124,36,.45); animation: story-status 2s infinite; }
+.story-pulse { fill: #F37C24; animation: story-pulse 2.8s ease-out infinite; transform-origin: center; }
+.story-pulse-late { animation-delay: -1.4s; }
+.story-shuttle { animation: story-shuttle 2.4s ease-in-out infinite alternate; }
+.story-warp { position: absolute; top: 18px; bottom: 18px; width: 1px; background: #0B0F14; opacity: .55; }
+.story-conveyor { overflow: hidden; background-image: repeating-linear-gradient(90deg, #0B0F14 0 8px, #4A5563 8px 13px); animation: story-conveyor 1s linear infinite; }
+.story-garment { border-radius: 4px 4px 8px 8px; clip-path: polygon(20% 0, 36% 14%, 64% 14%, 80% 0, 100% 22%, 84% 38%, 84% 100%, 16% 100%, 16% 38%, 0 22%); animation: story-garment 3s ease-in-out infinite; }
+.story-garment-two { animation-delay: -.65s; }
+.story-garment-three { animation-delay: -1.3s; }
+@keyframes story-thread { to { stroke-dashoffset: -80; } }
+@keyframes story-shuttle { to { transform: translateX(54px); } }
+@keyframes story-conveyor { to { background-position: 21px 0; } }
+@keyframes story-garment { 50% { transform: translateY(-6px); } }
+@keyframes story-pulse { 0%, 100% { opacity: .3; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.6); } }
+@keyframes story-status { 70% { box-shadow: 0 0 0 6px rgba(243,124,36,0); } 100% { box-shadow: 0 0 0 0 rgba(243,124,36,0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .story-thread, .story-status, .story-pulse, .story-shuttle, .story-conveyor, .story-garment {
+    animation: none;
+  }
+}

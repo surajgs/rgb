@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function RFQTeaser() {
   return (
-    <section className="section py-24 md:py-32 border-t border-mist">
+    <section className="section py-28 md:py-40 border-t border-mist">
       <div className="section-inner grid gap-10 lg:grid-cols-12 items-center">
         <div className="lg:col-span-7">
           <div className="eyebrow">Get started</div>

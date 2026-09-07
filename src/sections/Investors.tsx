@@ -11,11 +11,11 @@ const metrics = [
 
 export default function Investors() {
   return (
-    <section className="section py-24 md:py-32">
+    <section className="section py-20 md:py-28">
       <div className="section-inner">
         <SectionHead
           eyebrow="Operating snapshot · FY 26–27 Q1"
-          title={<>Manufacturing metrics<br/>in a <strong>nutshell.</strong></>}
+          title={<>Manufacturing metrics<br/>in a <strong className="text-arvOrange">nutshell.</strong></>}
           intro="What the production floor looked like at the close of the quarter. Detailed capacity and delivery data available on request."
         />
 

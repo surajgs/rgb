@@ -12,7 +12,7 @@ export default function GroupWebsites() {
       <div className="section-inner">
         <SectionHead
           eyebrow="Our group"
-          title={<>Sister brands &<br/><strong>allied programs.</strong></>}
+          title={<>Sister brands &<br/><strong className="text-arvOrange">allied programs.</strong></>}
           intro="Verticals we run alongside the main manufacturing floor — retail, private-label, foundation and fabric R&D."
         />
 

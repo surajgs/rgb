@@ -7,7 +7,7 @@ export default function Careers() {
         <div className="lg:col-span-7">
           <div className="eyebrow opacity-80">Careers</div>
           <h2 className="h-display mt-4 text-4xl md:text-6xl">
-            Advancing <strong>craft</strong>. Advancing <strong>careers.</strong>
+            Advancing <strong className="text-arvOrange">craft</strong>. Advancing <strong className="text-arvOrange">careers.</strong>
           </h2>
           <p className="mt-6 max-w-lg text-[15px] leading-relaxed opacity-90">
             From cutting-room apprentices to line supervisors and merchandising leads — we hire for the long arc. About 60% of our workforce is women; most started with us at entry level.

@@ -47,7 +47,7 @@ export default function Insights() {
   const g = groups.find(x => x.key === active)!
 
   return (
-    <section className="section py-24 md:py-32">
+    <section className="section py-20 md:py-28">
       <div className="section-inner">
         <SectionHead
           eyebrow="Insights"

@@ -55,7 +55,7 @@ export default function Sustainability() {
       <div className="section-inner">
         <SectionHead
           eyebrow="Sustainability"
-          title={<>Innovation in fibre.<br/><strong>Responsibility on the floor.</strong></>}
+          title={<>Innovation in fibre.<br/><strong className="text-arvOrange">Responsibility on the floor.</strong></>}
           intro="ESG isn't a report we file. It's how we source fabric, treat effluent, pay our stitching lines and audit our vendors."
         />
 
