@@ -6,9 +6,9 @@ export default function RFQTeaser() {
       <div className="section-inner grid gap-10 lg:grid-cols-12 items-center">
         <div className="lg:col-span-7">
           <div className="eyebrow">Get started</div>
-          <h2 className="h-display mt-4 text-4xl md:text-6xl leading-[1.02] tracking-tight">
+          <h2 className="h-display mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
             Tell us what you need.<br/>
-            <span className="text-rust italic font-normal">We'll help build it.</span>
+            <strong className="text-arvOrange">We'll help build it.</strong>
           </h2>
           <p className="mt-6 max-w-lg text-graphite text-lg leading-relaxed">
             A structured 7-step RFQ that captures requirement, quantity, product, customisation, files, delivery and contact — routed to the right team within an hour.

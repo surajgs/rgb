@@ -11,7 +11,7 @@ const metrics = [
 
 export default function Investors() {
   return (
-    <section className="section py-20 md:py-28">
+    <section id="investors" className="section py-20 md:py-28">
       <div className="section-inner">
         <SectionHead
           eyebrow="Operating snapshot · FY 26–27 Q1"
@@ -19,12 +19,12 @@ export default function Investors() {
           intro="What the production floor looked like at the close of the quarter. Detailed capacity and delivery data available on request."
         />
 
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-px bg-mist border border-mist rounded-card overflow-hidden">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-px bg-mist border border-mist rounded-card overflow-hidden">
           {metrics.map(m => (
-            <div key={m.k} className="bg-paper p-8 hover:bg-cream transition-colors">
+            <div key={m.k} className="bg-paper p-5 sm:p-7 md:p-8 hover:bg-cream transition-colors">
               <div className="eyebrow">{m.k}</div>
-              <div className="mt-4 big-num text-4xl md:text-5xl text-ink">{m.v}</div>
-              <div className="mt-3 text-xs font-mono text-arvOrange">{m.delta}</div>
+              <div className="mt-3 big-num text-3xl sm:text-4xl md:text-5xl text-ink">{m.v}</div>
+              <div className="mt-2 text-[11px] font-mono text-arvOrange">{m.delta}</div>
             </div>
           ))}
         </div>

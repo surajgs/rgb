@@ -22,7 +22,10 @@ export default function WhyChoose() {
       <div className="section-inner relative">
         <div className="grid gap-8 md:grid-cols-12 items-end">
           <div className="md:col-span-8">
-            <div className="eyebrow text-goldSoft">Why choose us</div>
+            <span className="inline-flex items-center gap-2 bg-white/15 px-3 py-1.5 rounded-pill text-[11px] font-mono uppercase tracking-micro text-white">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+              Why choose us
+            </span>
             <h2 className="h-display mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-paper">
               Numbers that <em>stand</em><br className="hidden sm:inline"/>
               <span> behind every order.</span>

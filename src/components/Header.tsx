@@ -35,7 +35,7 @@ const groups: Group[] = [
     items: [
       { to: '/#investors', label: 'Operating snapshot', sub: 'FY 26-27 Q1' },
       { to: '/#investors', label: 'Capacity brief', sub: 'PDF · on request' },
-      { to: '/#newsroom', label: 'Newsroom', sub: 'Milestones and updates' }
+      { to: '/#insights', label: 'Insights', sub: 'Field notes from the floor' }
     ]
   },
   {
@@ -77,7 +77,8 @@ export default function Header() {
           </Link>
 
           <div className="flex items-center gap-3">
-            <Link to="/quote" className="btn btn-accent hidden sm:inline-flex">
+            {/* Header CTA hidden on mobile — the sticky bottom bar already carries "Get a quote" */}
+            <Link to="/quote" className="btn btn-accent hidden lg:inline-flex">
               Request a quote →
             </Link>
             <button

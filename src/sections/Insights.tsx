@@ -47,11 +47,11 @@ export default function Insights() {
   const g = groups.find(x => x.key === active)!
 
   return (
-    <section className="section py-20 md:py-28">
+    <section id="insights" className="section py-20 md:py-28">
       <div className="section-inner">
         <SectionHead
           eyebrow="Insights"
-          title={<>Field notes from<br/>the production floor.</>}
+          title={<>Field notes from<br/>the <strong className="text-arvOrange">production floor.</strong></>}
           intro="Everything we've written about the products, the market and the small habits that make a garment last."
         />
 

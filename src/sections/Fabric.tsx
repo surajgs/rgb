@@ -47,17 +47,17 @@ export default function Fabric() {
       <div className="section-inner">
         <SectionHead
           eyebrow="Fabric library"
-          title={<>Find the Right Fabric<br/>for Your Requirement.</>}
+          title={<>Find the right fabric<br/>for your <strong className="text-arvOrange">requirement.</strong></>}
           intro="Every fabric we run — cotton, poly, blends, bamboo, modal, merino, linen — with the specification your procurement team asks for."
         />
 
-        <div className="mt-12 flex flex-wrap gap-3 items-end">
-          <div>
+        <div className="mt-10 flex flex-wrap gap-3 items-end">
+          <div className="w-full sm:w-auto">
             <div className="eyebrow mb-2">Search</div>
             <input
               value={q} onChange={e => setQ(e.target.value)}
               placeholder="Cotton, Polo, Wicking, Eco…"
-              className="border border-mist bg-paper px-3 py-2 text-sm w-64 focus:border-ink outline-none"
+              className="border border-mist bg-paper px-3 py-2 text-sm w-full sm:w-64 focus:border-ink outline-none"
             />
           </div>
           <FilterGroup label="GSM" value={gsm} onChange={setGsm as any} options={[
@@ -71,7 +71,29 @@ export default function Fabric() {
           </div>
         </div>
 
-        <div className="mt-6 border border-mist bg-paper overflow-x-auto">
+        {/* Mobile: stacked cards */}
+        <div className="mt-6 grid gap-3 sm:hidden">
+          {filtered.map(r => (
+            <div key={r.fabric} className="border border-mist bg-paper rounded-card p-4">
+              <div className="flex items-baseline justify-between">
+                <div className="font-display font-bold text-lg">{r.fabric}</div>
+                <span className="font-mono text-[11px] text-graphite">{r.gsm} GSM</span>
+              </div>
+              <div className="mt-2 text-[13px] text-graphite">{r.comp}</div>
+              <div className="mt-1 text-[13px]">{r.app}</div>
+              <div className="mt-1 text-[12px] text-graphite">{r.notes}</div>
+              <button className="mt-3 text-[11px] font-semibold tracking-micro uppercase text-rust hover:text-rustDark">
+                Request Sample →
+              </button>
+            </div>
+          ))}
+          {filtered.length === 0 && (
+            <div className="text-center text-graphite py-10">No fabrics match those filters.</div>
+          )}
+        </div>
+
+        {/* Desktop: full table */}
+        <div className="hidden sm:block mt-6 border border-mist bg-paper overflow-x-auto rounded-card">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-mist">

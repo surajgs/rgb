@@ -33,7 +33,7 @@ export default function CaseStudies() {
       <div className="section-inner">
         <SectionHead
           eyebrow="Projects"
-          title={<>Problem → Requirement →<br/>Solution → Result.</>}
+          title={<>Every order is a<br/><strong className="text-arvOrange">production plan.</strong></>}
           intro="Each order is a production plan. Here's how a few recent ones came together on our floor."
         />
 

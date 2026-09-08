@@ -190,13 +190,31 @@ function ChapterThree() {
   )
 }
 
-/* ---------- Chapter 4 — Offset card + closing call (teal) ---------- */
+/* ---------- Chapter 4 — Text-left + supporting card right (teal), matches chapters 01/03 ---------- */
 function ChapterFour() {
   return (
     <div className="arv-teal">
       <div className="section-inner py-20 md:py-28 grid gap-12 lg:grid-cols-12 items-center">
-        <div className="lg:col-span-5 order-2 lg:order-1">
-          <div className="rounded-card bg-paper text-ink shadow-soft p-6 md:p-7 lg:-ml-6">
+        <div className="lg:col-span-7">
+          {/* Teal is a light color; use a darker eyebrow chip for contrast (mirrors chapters 01-03) */}
+          <span className="inline-flex items-center gap-2 bg-ink/10 px-3 py-1.5 rounded-pill text-[11px] font-mono uppercase tracking-micro text-ink">
+            <span className="w-1.5 h-1.5 rounded-full bg-ink" />
+            Chapter 04 · Custom Brands
+          </span>
+          <h3 className="h-display mt-5 text-3xl md:text-5xl leading-[1.08]">
+            Your <strong>brand idea.</strong><br/>
+            Our <strong>production plan.</strong>
+          </h3>
+          <p className="mt-6 max-w-xl text-[15px] md:text-[16px] leading-relaxed text-ink/85">
+            Ten years ago, we didn't call them "custom brands" — we called them founders with a sketch and a deadline. Today it's an OEM/ODM programme with fabric development, sampling and shipper-ready cartons. Same instinct. Bigger toolkit.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-5">
+            <Link to="/solutions/custom-brands" className="btn bg-ink text-paper hover:bg-charcoal">Start your brand project →</Link>
+            <Link to="/quote" className="know-more">or send an RFQ →</Link>
+          </div>
+        </div>
+        <div className="lg:col-span-5">
+          <div className="rounded-card bg-paper text-ink shadow-soft p-6 md:p-7">
             <div className="eyebrow">Sample to shipper</div>
             <ol className="mt-5 space-y-1">
               {['Discovery', 'Fabric', 'Sample', 'Production', 'Branding', 'Pack'].map((t, i) => (
@@ -213,24 +231,6 @@ function ChapterFour() {
                 </li>
               ))}
             </ol>
-          </div>
-        </div>
-        <div className="lg:col-span-7 order-1 lg:order-2">
-          {/* Teal is a light color; use a darker eyebrow style for contrast */}
-          <span className="inline-flex items-center gap-2 bg-ink/10 backdrop-blur px-3 py-1.5 rounded-pill text-[11px] font-mono uppercase tracking-micro text-ink">
-            <span className="w-1.5 h-1.5 rounded-full bg-ink" />
-            Chapter 04 · Custom Brand Manufacturing
-          </span>
-          <h3 className="h-display mt-5 text-3xl md:text-5xl leading-[1.08]">
-            Your <strong>brand idea.</strong><br/>
-            Our <strong>production plan.</strong>
-          </h3>
-          <p className="mt-6 max-w-xl text-[15px] md:text-[16px] leading-relaxed text-ink/85">
-            Ten years ago, we didn't call them "custom brands" — we called them founders with a sketch and a deadline. Today it's an OEM/ODM programme with fabric development, sampling and shipper-ready cartons. Same instinct. Bigger toolkit.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-5">
-            <Link to="/solutions/custom-brands" className="btn bg-ink text-paper hover:bg-charcoal">Start your brand project →</Link>
-            <Link to="/quote" className="know-more">or send an RFQ →</Link>
           </div>
         </div>
       </div>

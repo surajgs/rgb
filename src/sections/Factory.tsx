@@ -19,7 +19,7 @@ export default function Factory() {
       <div className="section-inner">
         <SectionHead
           eyebrow="Factory & quality"
-          title={<>Where Quality<br/>Is Built In.</>}
+          title={<>Where quality is<br/><strong className="text-arvOrange">built in</strong>, not inspected in.</>}
           intro="No outsourced stages, no black-box vendors. Every piece of your order moves through our floor — inspected at every transition."
         />
 
